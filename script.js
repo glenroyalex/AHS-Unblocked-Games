@@ -1,7 +1,7 @@
 let gamesData = [];
 
 // Fetch the games from the JSON file
-fetch('games.json')
+fetch('data/games.json')
     .then(response => response.json())
     .then(data => {
         gamesData = data;
