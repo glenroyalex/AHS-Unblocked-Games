@@ -12,8 +12,8 @@
         "url": "https://www.example.com/another-game-url"
     },
     {
-         "id": "3",
-        "name": "Slope",
+        "id": "slope",
+        "title": "Slope",
         "thumbnail": "https://via.placeholder.com/150",
         "url": "games/slope/index.html"
     }
