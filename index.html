@@ -20,24 +20,5 @@
     </main>
 
     <script src="script.js"></script>
-<div id="games"></div>
-
-<script>
-fetch("games.json")
-  .then(res => res.json())
-  .then(data => {
-    const container = document.getElementById("games");
-
-    data.forEach(game => {
-      const el = document.createElement("a");
-      el.href = game.url;
-      el.innerText = game.name;
-      el.style.display = "block";
-      el.style.margin = "10px";
-
-      container.appendChild(el);
-    });
-  });
-</script>
 </body>
 </html>
