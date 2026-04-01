@@ -11,4 +11,11 @@
         "thumbnail": "https://via.placeholder.com/150",
         "url": "https://www.example.com/another-game-url"
     }
+
+
+    {
+         "id": "3",
+        "name": "Slope",
+        "url": "games/slope/index.html"
+    }
 ]
