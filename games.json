@@ -12,12 +12,6 @@
         "url": "https://www.example.com/another-game-url"
     },
     {
-        "id": "slope",
-        "title": "Slope",
-        "thumbnail": "https://via.placeholder.com/150",
-        "url": "games/slope/index.html"
-    },
-    {
         "id": 999,
         "title": "Minecraft 1.8.8",
         "thumbnail": "images/minecraft.png",
