@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Unblocked Games</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="application-name" content="Programa clone do game Flappy Bird">
+    <meta name="author" content="Weverson Rodrigues">
+    <meta name="generator" content="Visual Studio Code"> 
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="flappy.css">
+    <title>Flappy Bird</title>
 </head>
-<body>
 
-    <header>
-        <h1>Unblocked Games</h1>
-        <input type="text" id="searchBar" placeholder="Search games..." onkeyup="filterGames()">
-    </header>
-
-    <main>
-        <div id="gameGrid" class="game-grid">
-            <!-- Games will be injected here by JS -->
-        </div>
-    </main>
-
-    <script src="script.js"></script>
+<body class="conteudo">
+    <h1>Flappy Bird</h1>
+    <div wm-flappy></div>
+    
+    <script src="flappy.js"></script>
 </body>
+
 </html>
