@@ -1,14 +1,115 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Game Site</title>
+    <title>AHS Unblocked Games</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #111;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        #searchBar {
+            padding: 10px;
+            width: 250px;
+            margin: 20px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        #gameGrid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .game-card {
+            background: #222;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            width: 150px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .game-card:hover {
+            background: #333;
+            transform: scale(1.05);
+        }
+
+        .game-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+    </style>
 </head>
+
 <body>
 
-<h1>My Games</h1>
+<h1>🎮 My Game Site</h1>
+
+<input 
+    type="text" 
+    id="searchBar" 
+    placeholder="Search games..." 
+    onkeyup="filterGames()"
+>
 
 <div id="gameGrid"></div>
 
-<script src="script.js"></script>
+<script>
+let gamesData = [];
+
+// Load games.json
+fetch('games.json')
+    .then(response => response.json())
+    .then(data => {
+        gamesData = data;
+        displayGames(gamesData);
+    })
+    .catch(error => console.error('Error loading games:', error));
+
+// Display games
+function displayGames(games) {
+    const grid = document.getElementById('gameGrid');
+    grid.innerHTML = '';
+
+    games.forEach(game => {
+        const card = document.createElement('div');
+        card.className = 'game-card';
+
+        // CLICK → go to your custom page (Option 2 system)
+        card.onclick = () => {
+            window.location.href = game.file;
+        };
+
+        card.innerHTML = `
+            <img src="${game.thumbnail}" alt="${game.title}">
+            <h3>${game.title}</h3>
+        `;
+
+        grid.appendChild(card);
+    });
+}
+
+// Search filter
+function filterGames() {
+    const search = document.getElementById('searchBar').value.toLowerCase();
+
+    const filtered = gamesData.filter(game =>
+        game.title.toLowerCase().includes(search)
+    );
+
+    displayGames(filtered);
+}
+</script>
+
 </body>
 </html>
