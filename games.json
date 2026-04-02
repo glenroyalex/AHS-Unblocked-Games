@@ -10,5 +10,11 @@
     "title": "Flappy Bird",
     "thumbnail": "https://via.placeholder.com/150",
     "file": "flappy.html"
+  },
+  {
+    "id": 3,
+    "title": "1v1 lol",
+    "thumbnail": "https://via.placeholder.com/150",
+    "file": "1v1lol.html"
   }
 ]
