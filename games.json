@@ -17,4 +17,10 @@
     "thumbnail": "https://via.placeholder.com/150",
     "file": "slope.html"
   }
+  {,
+  "id": 2,
+  "title": "Flappy Bird",
+  "thumbnail": "https://via.placeholder.com/150",
+  "file": "flappy.html"
+}
 ]
