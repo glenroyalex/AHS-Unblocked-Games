@@ -17,8 +17,17 @@ function displayGames(games) {
         const card = document.createElement('div');
         card.className = 'game-card';
         // When clicked, redirect to the player page with the game ID in the URL
-        card.onclick = () => { window.location.href = `game.html?id=${game.id}`; };
-
+        card.onclick = () => {
+    if (game.type === "external") {
+        window.location.href = game.url;
+    } 
+    else if (game.type === "embed") {
+        window.location.href = `player.html?url=${encodeURIComponent(game.url)}`;
+    } 
+    else {
+        window.location.href = `game.html?id=${game.id}`;
+    }
+};
         card.innerHTML = `
             <img src="${game.thumbnail}" alt="${game.title}">
             <h3>${game.title}</h3>
